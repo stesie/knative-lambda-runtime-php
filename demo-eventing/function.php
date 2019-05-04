@@ -1,6 +1,6 @@
 <?php
 
-function hanlder($eventData)
+function handler($eventData)
 {
     return [
         'statusCode' => 200,

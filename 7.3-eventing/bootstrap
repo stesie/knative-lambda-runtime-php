@@ -205,15 +205,16 @@ while (true) {
 	//Process the events
 	$eventPayload = $lambdaRuntime->getEventPayload();
 	//Handler is of format Filename.function
-	//Capture stdout
-	ob_start();
 	//try catch to capture any exceptions that may get thrown by the handler
 	try{
 		//Execute handler
 		$functionReturn = $handlerFunction($eventPayload);
-		$out = ob_get_clean();
+
+		if (!is_string($functionReturn)) {
+			$functionReturn = \json_encode($functionReturn);
+		}
+
 		$lambdaRuntime->addToResponse($functionReturn);
-		$lambdaRuntime->addToResponse($out);
 		//Report result
 		$lambdaRuntime->flushResponse();
 	} catch (Exception $e) {
