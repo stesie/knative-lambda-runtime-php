@@ -34,3 +34,7 @@ multiple invocations.
 
 This implementation for Knative is mostly based on
 [Parikshit Agnihotry's PHP-Lambda-Runtime]()https://github.com/pagnihotry/PHP-Lambda-Runtime/.
+
+## Using it
+
+... see examples in the corresponding demo sub-folders: demo-native and demo-eventing.
