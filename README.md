@@ -33,7 +33,7 @@ This means you may (but likely still shouldn't) share (function local) state ove
 multiple invocations.
 
 This implementation for Knative is mostly based on
-[Parikshit Agnihotry's PHP-Lambda-Runtime]()https://github.com/pagnihotry/PHP-Lambda-Runtime/.
+[Parikshit Agnihotry's PHP-Lambda-Runtime](https://github.com/pagnihotry/PHP-Lambda-Runtime/).
 
 ## Using it
 
